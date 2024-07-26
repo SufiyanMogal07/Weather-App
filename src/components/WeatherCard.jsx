@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { IoSearch } from "react-icons/io5";
+import humidity from './humidity.png'
+import wind from './wind.png'
 
 const WeatherCard = () => {
   const [data, setdata] = useState({});
@@ -80,12 +82,18 @@ const WeatherCard = () => {
             </div>
             <div className="w-bottom">
               <div className="w-humidity">
-                <span>Humidity: </span>
-                <span className="white">{data.main.humidity + "%"}</span>
+                <img src={humidity} height={45}/>
+                <div className="flex">
+                <span>Humidity</span>
+                <span>{data.main.humidity + "%"}</span>
+                </div>
               </div>
               <div className="w-wind">
-                <span>Wind Speed:</span>
-                <span className="white">{data.wind.speed + "km/h"}</span>
+              <img src={wind} height={45}/>
+                <div className="flex">
+                <span>Wind Speed</span>
+                <span>{data.wind.speed + "km/h"}</span>
+                </div>
               </div>
             </div>
           </div>
