@@ -1,0 +1,3 @@
+[build]
+  command = "npm run build"  # The command to build your Vite React project
+  publish = "dist"           # The directory where the build output is stored
